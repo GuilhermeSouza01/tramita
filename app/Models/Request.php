@@ -2,6 +2,13 @@
 
 namespace App\Models;
 
+use App\Enums\RequestStatus;
+use App\Models\ApprovalStep;
+use App\Models\Attachment;
+use App\Models\Comment;
+use App\Models\Department;
+use App\Models\RequestType;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -84,7 +91,7 @@ class Request extends Model
 
     public function scopePending($query)
     {
-        return $query->where('status', [
+        return $query->whereIn('status', [
             RequestStatus::Pending,
             RequestStatus::UnderReview
         ]);
