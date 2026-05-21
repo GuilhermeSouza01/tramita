@@ -1,0 +1,58 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+
+/* Custom styles for the Filament admin panel can be added here. */
+
+/* SIDEBAR */
+
+.fi-sidebar {
+    background-color: #eef0ff;
+    border-right: 1px solid #dbe1ff; /* Darker background for the sidebar */
+}
+.fi-sidebar-item a {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+    border-radius: 12px;
+
+    margin: 4px 10px;
+}
+
+/* HOVER */
+.fi-sidebar-item a:hover {
+    background-color: #dae2fd;
+
+    color: #234db5;
+}
+
+/* ITEM ATIVO */
+.fi-sidebar-item.fi-active .fi-sidebar-item-btn {
+    background-color: #dbe1ff;
+
+    color: #234db5;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+.fi-topbar {
+    background-color: rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #dbe1ff;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.03);
+
+}
+
+.fi-body {
+    background-color: #faf8ff
+}
