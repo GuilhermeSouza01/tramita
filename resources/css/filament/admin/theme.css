@@ -6,11 +6,54 @@
 
 /* Custom styles for the Filament admin panel can be added here. */
 
+/* LIGHT MODE */
+:root {
+
+    --tramita-bg: #faf8ff;
+
+    --tramita-sidebar: #eef0ff;
+
+    --tramita-card: #ffffff;
+
+    --tramita-border: #dbe1ff;
+
+    --tramita-hover: #dae2fd;
+
+    --tramita-primary: #4167cf;
+
+    --tramita-text: #131b2e;
+}
+
+/* DARK MODE */
+
+/*
+.dark {
+
+    --tramita-bg: #0f172a;
+
+    --tramita-sidebar: #111827;
+
+    --tramita-card: #1e293b;
+
+    --tramita-border: #334155;
+
+    --tramita-hover: #1e3a8a;
+
+    --tramita-primary: #5b7fff;
+
+    --tramita-text: #f8fafc;
+
+    --tramita-topbar: rgba(17, 24, 39, 0.8);
+}
+
+*/
 /* SIDEBAR */
 
+/*
 .fi-sidebar {
-    background-color: #eef0ff;
-    border-right: 1px solid #dbe1ff; /* Darker background for the sidebar */
+    background-color: var(--tramita-sidebar);
+
+    border-right: 1px solid var(--tramita-border);
 }
 .fi-sidebar-item a {
     transition:
@@ -22,31 +65,32 @@
 
     margin: 4px 10px;
 }
+*/
 
 /* HOVER */
+
+/*
 .fi-sidebar-item a:hover {
     background-color: #dae2fd;
 
     color: #234db5;
 }
+*/
 
 /* ITEM ATIVO */
-.fi-sidebar-item.fi-active .fi-sidebar-item-btn {
-    background-color: #dbe1ff;
 
-    color: #234db5;
+/* .fi-sidebar-item.fi-active .fi-sidebar-item-btn {
+    background-color: var(--tramita-hover);
 
-    border-radius: 12px;
-
-    font-weight: 600;
+    color: var(--tramita-primary);
 }
 
 .fi-topbar {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--tramita-topbar);
+
+    border-bottom: 1px solid var(--tramita-topbar-border);
 
     backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid #dbe1ff;
 
     box-shadow:
         0 1px 2px rgba(15, 23, 42, 0.03);
@@ -54,5 +98,7 @@
 }
 
 .fi-body {
-    background-color: #faf8ff
-}
+    background-color: var(--tramita-bg);
+
+    color: var(--tramita-text);
+} */
