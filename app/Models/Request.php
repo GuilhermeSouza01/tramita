@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\Priority;
 use App\Enums\RequestStatus;
 use App\Models\ApprovalStep;
 use App\Models\Attachment;
@@ -30,15 +31,19 @@ class Request extends Model
         'title',
         'description',
         'status',
+        'priority',
         'form_data',
         'submitted_at',
         'resolved_at',
-        'due_at'
+        'due_at',
+        'sla_target_at',
     ];
 
     protected $casts = [
         'status' => RequestStatus::class,
+        'priority' => Priority::class,
         'due_at' => 'datetime',
+        'sla_target_at' => 'datetime',
         'submitted_at' => 'datetime',
         'resolved_at' => 'datetime',
         'form_data' => 'array',

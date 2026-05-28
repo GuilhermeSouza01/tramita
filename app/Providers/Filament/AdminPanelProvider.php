@@ -34,20 +34,18 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => '#234db5',
             ])
+            ->darkMode(true)
             ->navigationGroups([
                 NavigationGroup::make()
-                    ->label('Administração'),
-                    // ->icon(Heroicon::OutlinedCog6Tooth),
-                NavigationGroup::make()
                     ->label('Operacional'),
-                    // ->icon(Heroicon::OutlinedDocumentText),
+                NavigationGroup::make()
+                    ->label('Administração'),
                 NavigationGroup::make()
                     ->label('Aprovações'),
-                    // ->icon(Heroicon::OutlinedCheckBadge),
                 NavigationGroup::make()
-                ->label(fn (): string => __('navigation.settings'))
-                ->icon(Heroicon::OutlinedCog6Tooth)
-                ->collapsed(),
+                    ->label(fn (): string => __('navigation.settings'))
+                    ->icon(Heroicon::OutlinedCog6Tooth)
+                    ->collapsed(),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
